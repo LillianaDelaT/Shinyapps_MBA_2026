@@ -6,13 +6,6 @@
 
 paquetes <- c("shiny", "ggplot2", "plotly", "bslib")
 
-# Instalar los paquetes que no estén instalados
-faltantes <- paquetes[!paquetes %in% rownames(installed.packages())]
-
-if (length(faltantes) > 0) {
-  options(repos = c(CRAN = "https://cloud.r-project.org"))
-  install.packages(faltantes)
-}
 
 # Cargar paquetes
 lapply(paquetes, library, character.only = TRUE)
